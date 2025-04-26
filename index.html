@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SparseMM: Head Sparsity Emerges from Visual Concept Responses in MLLMs">
+  
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="SparseMM, Visual Head Sparsity, MLLMs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SparseMM</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-five-sixths">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title"><img src="static/images/ola-icon.png" width="40%" alt="Icon" style="vertical-align: middle;"><br><br><span>SparsMM</span>: Head Sparsity Emerges from Visual Concept Responses in MLLMs</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+              <span class="author-block">
+                <a href='' target="_blank"><font color="#B082C9"><b>Jiahui Wang</b></font></a><sup>1,*</sup>&emsp;
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/liuzuyan" target="_blank"><font color="#B082C9"><b>Zuyan Liu</b></font></a><sup>1,2,*</sup>&emsp;
+              </span>
+              <span class="author-block">
+                <a href="https://raoyongming.github.io/" target="_blank"><font color="#B082C9"><b>Yongming Rao</b></font></a><sup>2,1</sup>&emsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=TN8uDQoAAAAJ&hl=en" target="_blank"><font color="#B082C9"><b>Jiwen Lu</b></font></a><sup>1</sup>&emsp;
+              </span>
+              </div>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <sup>1</sup>Tsinghua University&emsp;
+                    <sup>2</sup>Tencent Hunyuan Research&emsp;
+                    <sup>*</sup>Equal Contribution&emsp;
+                  </span>
+                  <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                  <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span> -->
+                </div>
+
+                <div class="content has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2502.04328" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- <span class="link-block">
+                    <a href="https://huggingface.co/collections/THUdyh/ola-67b8220eb93406ec87aeec37" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Checkpoint</span>
+                  </a>
+                </span> -->
+                </span>
+
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/THUdyh/Ola" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span>🎨Demo</span>
+              </a>
+            </span> -->
+            </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/CR400AF-A/SparseMM" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+                </span>
+
+                <!-- <span class="link-block">
+                  <a href="https://huggingface.co/datasets/THUdyh/Ola-Data" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Ola Data</span>
+                </a>
+              </span> -->
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://x.com/_akhaliq/status/1836963718887866400" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span>Twitter</span>
+                </a>
+              </span> -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multimodal Large Language Models (MLLMs) are commonly derived by extending pre-trained Large Language Models (LLMs) with visual capabilities. 
+            In this work, we investigate how MLLMs process visual inputs by analyzing their attention mechanisms. We reveal a surprising sparsity phenomenon: 
+            only a small subset (approximately less than 5%) of attention heads in LLMs actively contribute to visual understanding, termed <b>visual heads</b>. 
+            To identify these heads efficiently, we design a training-free framework that quantifies head-level visual relevance through targeted response analysis. 
+            Building on this discovery, we introduce <b>SparseMM</b>, a KV-Cache optimization strategy that allocates asymmetric computation budgets to heads in LLMs based on their visual scores, 
+            leveraging the sparity of visual heads for accelerating the inference of MLLMs. Compared with prior KV-Cache acceleration methods that ignore the particularity of visual, 
+            SparseMM prioritizes stress and retaining visual semantics during decoding. Extensive evaluations across mainstream multimodal benchmarks demonstrate that SparseMM achieves superior accuracy-efficiency trade-offs. 
+            Notably, SparseMM delivers 1.38× real-time acceleration and 52\% memory reduction during generation while maintaining performance parity on efficiency test.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Chase Visual Head</h2>
+        <h2 class="content has-text-justified">
+          <b>Chase Visual Head.</b> 
+          To investigate how attention heads within the MLLM attend to visual elements and to identify the specific visual head, we introduce an OCR-based method and define the visual score.
+          For each output token, we first determine its corresponding region within the image based on (text, bbox) pair. Based on this region, we then identify the associated image tokens in the input sequence
+          Subsequently, we iterate over all attention heads. For any given head, if the token that receives the highest attention in this head's attention matrix belongs to the set of identified image tokens, 
+          a "hit" is recorded for that head and its score is incremented by the inverse of the number of image tokens
+        </h2>
+        <img src="static/images/Visual_Head.png" height="100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">SparseMM for MLLM Acceleration</h2>
+        <h2 class="content has-text-justified">
+          <b>Illustrations of SparseMM.</b> For multimodal models, visual tokens usually account for a large proportion, which causes the KV-Cache to consume much GPU memory. 
+          Given a fixed cache budget, we use the visual head to guide the KV-Cache allocation between attention heads. The cache budget of each head consists of three parts: 
+          a Uniform-Based Cache, a Local Window Cache, and a Score-Preferred Cache.
+        </h2>
+        <img src="static/images/SparseMM.png" height="100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Benchmark Performance</h2>
+        <h2 class="content has-text-justified">
+          <b>Main Results.</b> We select representative benchmarks, and select mainstream state-of-the-art KV-Cache compression methods.
+        </h2>
+        <img src="static/images/main_result.png" height="100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Efficiency Evaluation</h2>
+        <h2 class="content has-text-justified">
+          <b>Efficiency Results.</b> We compare our SparseMM with FullKV method. The results show that we achieve superior accuracy-efficiency trade-offs.
+        </h2>
+        <img src="static/images/efficiency.png" height="100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel examples-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Visualization Examples of Visual Head</h2> <br></div>
+  </div></section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/viz1.png" width="100%"/>
+            </div>
+
+            <div class="item">
+            <img src="static/images/viz2.png" width="200%"/>
+          </div>
+    
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation (BibTeX)</h2><pre><code>
+@article{liu2025ola,
+  title={Ola: Pushing the Frontiers of Omni-Modal Language Model with Progressive Modality Alignment},
+  author={Liu, Zuyan and Dong, Yuhao and Wang, Jiahui and Liu, Ziwei and Hu, Winston and Lu, Jiwen and Rao, Yongming},
+  journal={arXiv preprint arXiv:2502.04328},
+  year={2025}
+  }
+    </code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+
+        <p>
+          This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+  </body>
+  </html>
