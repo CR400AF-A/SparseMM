@@ -6,6 +6,7 @@ from tqdm import tqdm
 import torch
 import re
 from PIL import Image
+from transformers import DynamicCache
 try:
     from qwen_vl_utils import process_vision_info
 except ImportError:
@@ -170,6 +171,7 @@ def eval_single(idx, da):
             use_cache=True, 
             return_dict=True,
             output_attentions=True,
+            past_key_values=DynamicCache()
         )
 
         ocr_idxs = find_image_idx_qwen(image_size, origin_image_size, input_ids['image_grid_thw'][0], parsed_data)
